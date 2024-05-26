@@ -1,0 +1,63 @@
+@startuml
+class StrategyDesignPattern.WithStrategyDesignPattern.OffRoadVehicle {
+}
+class StrategyDesignPattern.WithoutStrategyDesignPattern.Vehicle {
++ void drive()
+}
+
+class StrategyDesignPattern.WithStrategyDesignPattern.XyzDriveStrategy {
++ void drive()
+}
+
+class StrategyDesignPattern.WithStrategyDesignPattern.GoodsVehicle {
+}
+class StrategyDesignPattern.WithoutStrategyDesignPattern.OffRoadVehicle {
++ void drive()
+}
+
+interface StrategyDesignPattern.WithStrategyDesignPattern.DriveStrategy {
++ void drive()
+}
+
+class StrategyDesignPattern.WithStrategyDesignPattern.DriveStrategy$GoodsVehicle {
+}
+class StrategyDesignPattern.WithStrategyDesignPattern.SportsDriveStrategy {
++ void drive()
+}
+
+class StrategyDesignPattern.WithoutStrategyDesignPattern.PassengerVehicle {
+}
+class StrategyDesignPattern.WithStrategyDesignPattern.SportsVehicle {
+}
+class StrategyDesignPattern.WithoutStrategyDesignPattern.SportsVehicle {
++ void drive()
+}
+
+class StrategyDesignPattern.WithStrategyDesignPattern.Main {
++ {static} void main(String[])
+}
+
+class StrategyDesignPattern.WithStrategyDesignPattern.Vehicle {
+~ DriveStrategy driveStrategyObject
++ void drive()
+}
+
+
+class StrategyDesignPattern.WithStrategyDesignPattern.NormalDriveStrategy {
++ void drive()
+}
+
+
+
+StrategyDesignPattern.WithStrategyDesignPattern.Vehicle <|-- StrategyDesignPattern.WithStrategyDesignPattern.OffRoadVehicle
+StrategyDesignPattern.WithStrategyDesignPattern.DriveStrategy <|.. StrategyDesignPattern.WithStrategyDesignPattern.XyzDriveStrategy
+StrategyDesignPattern.WithStrategyDesignPattern.Vehicle <|-- StrategyDesignPattern.WithStrategyDesignPattern.GoodsVehicle
+StrategyDesignPattern.WithoutStrategyDesignPattern.Vehicle <|-- StrategyDesignPattern.WithoutStrategyDesignPattern.OffRoadVehicle
+StrategyDesignPattern.WithStrategyDesignPattern.DriveStrategy +.. StrategyDesignPattern.WithStrategyDesignPattern.DriveStrategy$GoodsVehicle
+StrategyDesignPattern.WithStrategyDesignPattern.Vehicle <|-- StrategyDesignPattern.WithStrategyDesignPattern.DriveStrategy$GoodsVehicle
+StrategyDesignPattern.WithStrategyDesignPattern.DriveStrategy <|.. StrategyDesignPattern.WithStrategyDesignPattern.SportsDriveStrategy
+StrategyDesignPattern.WithoutStrategyDesignPattern.Vehicle <|-- StrategyDesignPattern.WithoutStrategyDesignPattern.PassengerVehicle
+StrategyDesignPattern.WithStrategyDesignPattern.Vehicle <|-- StrategyDesignPattern.WithStrategyDesignPattern.SportsVehicle
+StrategyDesignPattern.WithoutStrategyDesignPattern.Vehicle <|-- StrategyDesignPattern.WithoutStrategyDesignPattern.SportsVehicle
+StrategyDesignPattern.WithStrategyDesignPattern.DriveStrategy <|.. StrategyDesignPattern.WithStrategyDesignPattern.NormalDriveStrategy
+@enduml

@@ -1,12 +1,10 @@
-package StrategyDesignPattern;
-
-import StrategyDesignPattern.WithStrategyDesignPattern.DriveStrategy;
+package StrategyDesignPattern.WithStrategyDesignPattern;
 
 public class Vehicle {
     DriveStrategy driveStrategyObject;
 
     // This is known as constructor injection
-    Vehicle(DriveStrategy driveStrategyObject){
+    public Vehicle(DriveStrategy driveStrategyObject){
         this.driveStrategyObject = driveStrategyObject;
     }
 
